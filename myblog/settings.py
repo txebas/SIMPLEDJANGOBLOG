@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-d$5(r9p2v7$r%#rdhrtvg_0=45pit&a6ef5d$$1)b^3yejc3-d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.invertirenacciones.es','invertirenacciones.es','217.160.227.122']
+ALLOWED_HOSTS = []
 
 
 # Application definition
