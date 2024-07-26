@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4">{{ libro.titulo }}</h1>
+    {% if libro.imagen %}
+    <img src="{{ libro.imagen.url }}" alt="{{ libro.titulo }}" class="mb-4 h-64 w-auto">
+    {% endif %}
+    <p class="text-lg mb-2"><strong>Autor:</strong> {{ libro.autor }}</p>
+    <p class="text-lg mb-2"><strong>Editorial:</strong> {{ libro.editorial }}</p>
+    <p class="text-lg mb-2"><strong>Año:</strong> {{ libro.ano }}</p>
+    <p class="text-lg mb-2"><strong>Nivel:</strong> {{ libro.nivel }}</p>
+    <p class="text-lg mb-4"><strong>Enlace:</strong> <a href="{{ libro.enlace }}" class="text-indigo-600 hover:underline" target="_blank">Ver más</a></p>
+    <div class="text-lg">{% autoescape off %}{{ libro.resumen|safe }}{% endautoescape %}</div>
+    <a href="{% url 'libro_list' %}" class="text-indigo-600 hover:underline">Volver a la lista de libros</a>
+</div>
+{% endblock %}
+
+
