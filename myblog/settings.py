@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-d$5(r9p2v7$r%#rdhrtvg_0=45pit&a6ef5d$$1)b^3yejc3-d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.invertirenacciones.es','invertirenacciones.es','217.160.227.122']
 
 
 # Application definition
@@ -143,3 +143,8 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
     },
 }
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
